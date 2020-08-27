@@ -32,17 +32,19 @@ function extNavbarCanvas() {
 // ---------------------------------------------------------------------------------------------------------------------
 
 function extGallery() {
-  const $data = $('[data-fancybox="gallery"]');
+  const $article = $('.article-body');
+  const $gallery = $('.ext-gallery');
 
-  $data.fancybox({
-    buttons: [
-      'zoom',
-      'slideShow',
-      'fullScreen',
-      'download',
-      'thumbs',
-      'close'
-    ]
+  $article.lightGallery({
+    selector: '.gallery-item',
+    galleryId: 2,
+    share: 0
+  });
+
+  $gallery.lightGallery({
+    selector: '.gallery-item',
+    galleryId: 1,
+    share: 0
   });
 }
 
