@@ -1,5 +1,5 @@
 {{ $user := ((.Get 0) | default "octocat") }}
-{{ $token := $.Site.Params.api.github.token }}
+{{ $token := $.Site.Params.api.github.token | base64Decode }}
 {{ $url := "https://api.github.com" }}
 {{ $data := getJSON $url "/users/" $user "?access_token=" $token }}
 

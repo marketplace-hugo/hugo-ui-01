@@ -1,6 +1,6 @@
 {{ $owner := ((.Get 0) | default "github") }}
 {{ $repo := ((.Get 1) | default "platform-samples") }}
-{{ $token := $.Site.Params.api.github.token }}
+{{ $token := $.Site.Params.api.github.token | base64Decode }}
 {{ $url := "https://api.github.com" }}
 {{ $data := getJSON $url "/repos/" $owner "/" $repo "?access_token=" $token }}
 

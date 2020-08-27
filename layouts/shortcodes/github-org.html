@@ -1,5 +1,5 @@
 {{ $org := ((.Get 0) | default "github") }}
-{{ $token := $.Site.Params.api.github.token }}
+{{ $token := $.Site.Params.api.github.token | base64Decode }}
 {{ $url := "https://api.github.com" }}
 {{ $data := getJSON $url "/orgs/" $org "?access_token=" $token }}
 
