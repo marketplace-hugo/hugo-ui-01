@@ -1,0 +1,14 @@
+<!-- menu: main -->
+<nav class="navbar fixed-top navbar-light bg-light border-bottom shadow-sm">
+  <a title="{{ $.Site.Title }}" class="navbar-brand" href='{{ "/" | relLangURL }}'>{{ $.Site.Title }}</a>
+  <button type="button" class="navbar-toggler" data-toggle="navbar-canvas" data-target="#navTopBar" aria-controls="navTopBar" aria-expanded="false" aria-label="">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse navbar-collapse-canvas bg-light border-left" id="navTopBar">
+    <ul class="navbar-nav">
+      {{ partial "module/menu/item" (dict "context" . "id" "main") }}
+      {{ partial "module/menu/info" . }}
+    </ul>
+  </div>
+</nav>
+<!-- / menu: main -->

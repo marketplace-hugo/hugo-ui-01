@@ -1,0 +1,12 @@
+name = "UI"
+license = ""
+licenselink = ""
+description = ""
+homepage = ""
+tags = ["website", "blog"]
+features = ["posts", "shortcodes", "comments"]
+min_version = "0.73.0"
+
+[author]
+  name = "Yu Dunaev (dun43v)"
+  homepage = "https://dunaev.dev"

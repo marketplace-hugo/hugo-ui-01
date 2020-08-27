@@ -1,0 +1,26 @@
+<!-- search -->
+<li class="nav-item dropdown">
+  <a title='{{ i18n "search" }}' class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-search fa-fw"></i>
+    <span class="ml-2">{{ i18n "search" }}</span>
+  </a>
+  <div class="dropdown-menu">
+    {{ partial "module/search/form" (dict "context" . "id" "google") }}
+    {{ partial "module/search/form" (dict "context" . "id" "yandex") }}
+  </div>
+</li>
+<!-- / search -->
+
+<!-- languages -->
+<li class="nav-item dropdown">
+  <a title='{{ i18n "languages" }}' class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-globe fa-fw"></i>
+    <span class="ml-2">{{ .Language.LanguageName }}</span>
+  </a>
+  <div class="dropdown-menu">
+    {{ range $.Site.Home.AllTranslations }}
+    <a class="dropdown-item" href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName }}</a>
+    {{ end }}
+  </div>
+</li>
+<!-- / languages -->
