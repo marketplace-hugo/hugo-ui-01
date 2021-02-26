@@ -11,9 +11,7 @@
         {{ partial "module/menu/item" (dict "context" . "id" "main") }}
       </ul>
       <!-- search -->
-      <form class="d-flex">
-        {{ partial "module/search/form" (dict "context" . "id" "google") }}
-      </form>
+      {{ partial "module/search/form" (dict "context" . "id" "google") }}
       <!-- / search -->
       <ul class="navbar-nav">
         {{ partial "module/menu/info" . }}

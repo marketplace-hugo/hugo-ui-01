@@ -11,10 +11,10 @@
 
 <!-- google -->
 {{ if (eq $id "google") }}
-<form action="https://google.com/search" method="get" class="px-4 pt-1" target="_blank">
+<form action="https://google.com/search" method="get" class="d-flex" target="_blank">
   <input type="hidden" name="as_sitesearch" value="{{ $url.Host }}"/>
   <div class="input-group">
-    <span class="input-group-text"><i class="fab fa-google fa-fw"></i></span>
+    <span class="input-group-text"><i class="fas fa-search fa-fw"></i></span>
     <input type="search" class="form-control" name="q" placeholder='{{ i18n "searchGoogle" }}' aria-label='{{ i18n "searchGoogle" }}'/>
   </div>
 </form>
@@ -23,7 +23,7 @@
 
 <!-- yandex -->
 {{ if (eq $id "yandex") }}
-<form action="{{ $urlYa }}/yandsearch" method="get" class="px-4 mt-2" target="_blank">
+<form action="{{ $urlYa }}/yandsearch" method="get" class="d-flex" target="_blank">
   <input type="hidden" name="site" value="{{ $url.Host }}"/>
   <div class="input-group">
     <span class="input-group-text"><i class="fab fa-{{ $iconYa }} fa-fw"></i></span>
@@ -35,7 +35,7 @@
 
 <!-- bing -->
 {{ if (eq $id "bing") }}
-<form action="https://bing.com/search" method="get" class="px-4 mt-2" target="_blank">
+<form action="https://bing.com/search" method="get" class="d-flex" target="_blank">
   <input type="hidden" name="q1" value="site:{{ $url.Host }}"/>
   <div class="input-group">
     <span class="input-group-text"><i class="fab fa-microsoft fa-fw"></i></span>
