@@ -9,8 +9,8 @@
 {{ $extSize := (print $size (path.Ext $id)) }}
 {{ $img := (replace $id $ext $extSize) }}
 
-{{ $space := "mr-3" }}
-{{ if (eq $align "float-right") }}{{ $space = "ml-3" }}{{ end }}
+{{ $space := "me-3" }}
+{{ if (eq $align "float-right") }}{{ $space = "ms-3" }}{{ end }}
 {{ if (eq $align "float-center") }}{{ $align = "text-center" }}{{ end }}
 
 <div class="shortcode shortcode-{{ .Name }} {{ $align }} {{ $space }}">

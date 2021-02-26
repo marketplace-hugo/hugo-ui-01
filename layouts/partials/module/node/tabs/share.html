@@ -7,7 +7,7 @@
 {{ $tags := $x.Params.tags | default "" }}
 {{ $tags = delimit $tags "," }}
 
-<div class="px-4 pt-2">
+<div class="px-3 pt-2">
   <ul class="list-inline text-center">
     <li class="list-inline-item mx-1 my-1">
       {{ $twitter := (i18n "twitter") }}
@@ -62,7 +62,7 @@
 
 <div class="dropdown-divider"></div>
 
-<div class="px-4">
+<div class="px-3">
   <ul class="list-inline text-center">
     <li class="list-inline-item mx-1 my-1">
       {{ $pocket := (i18n "pocket") }}
@@ -124,22 +124,14 @@
 <div class="dropdown-divider"></div>
 
 <div class="px-4 pt-1">
-  <div class="form-group">
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><i class="fas fa-link fa-fw"></i></span>
-      </div>
-      <input type="text" class="form-control ext-select-all" value="{{ $url }}" readonly/>
-    </div>
+  <div class="input-group">
+    <span class="input-group-text"><i class="fas fa-link fa-fw"></i></span>
+    <input type="text" class="form-control ext-select-all" value="{{ $url }}" readonly/>
   </div>
   {{ with $x.File }}
-  <div class="form-group">
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><i class="fas fa-file fa-fw"></i></span>
-      </div>
-      <input type="text" class="form-control ext-select-all" value="{{ .Path }}" readonly/>
-    </div>
+  <div class="input-group mt-2">
+    <span class="input-group-text"><i class="fas fa-file fa-fw"></i></span>
+    <input type="text" class="form-control ext-select-all" value="{{ .Path }}" readonly/>
   </div>
   {{ end }}
 </div>

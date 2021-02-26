@@ -15,7 +15,7 @@
             <ul class="list-unstyled">
               {{ range .Pages }}
               <li class="d-flex">
-                <div class="text-muted mr-3">{{ .Date.Format "01/02" }}</div>
+                <div class="text-muted me-3">{{ .Date.Format "01/02" }}</div>
                 <div><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
               </li>
               {{ end }}

@@ -61,10 +61,6 @@ body {
   }
 }
 
-.media {
-  .article-cover {
-    a {
-      background-color: $color-00;
-    }
-  }
+a {
+  text-decoration: none;
 }

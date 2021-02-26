@@ -18,19 +18,19 @@
           <div class="col-8">
             <ul class="list-group list-group-flush">
               <li class="list-group-item text-truncate">
-                <i class="fas fa-at fa-fw mr-1"></i>
+                <i class="fas fa-at fa-fw me-1"></i>
                 <a href="{{ $data.web_url }}" target="_blank" rel="noopener nofollow">{{ $data.name }}</a>
               </li>
               <li class="list-group-item">
                 <div class="row">
                   <div class="col">
-                    <i class="fas fa-book fa-fw mr-1"></i>
+                    <i class="fas fa-book fa-fw me-1"></i>
                     <a href="{{ $data.web_url }}" target="_blank" rel="noopener nofollow">
                       {{ len $data.projects }}
                     </a>
                   </div>
                   <div class="col">
-                    <i class="fas fa-book-open fa-fw mr-1"></i>
+                    <i class="fas fa-book-open fa-fw me-1"></i>
                     <a href="{{ $data.web_url }}/-/shared" target="_blank" rel="noopener nofollow">
                       {{ len $data.shared_projects }}
                     </a>
@@ -38,11 +38,11 @@
                 </div>
               </li>
               <li class="list-group-item">
-                <i class="fas fas fa-eye fa-fw mr-1"></i>
+                <i class="fas fas fa-eye fa-fw me-1"></i>
                 {{ humanize $data.visibility }}
               </li>
               <li class="list-group-item">
-                <i class="fas fa-calendar-plus fa-fw mr-1"></i>
+                <i class="fas fa-calendar-plus fa-fw me-1"></i>
                 {{ dateFormat "2006/01/02 15:04:05 MST" $data.created_at }}
               </li>
             </ul>
@@ -69,29 +69,29 @@
           <div class="col-8">
             <ul class="list-group list-group-flush">
               <li class="list-group-item text-truncate">
-                <i class="fas fa-at fa-fw mr-1"></i>
+                <i class="fas fa-at fa-fw me-1"></i>
                 <a href="{{ .web_url }}" target="_blank" rel="noopener nofollow">{{ .name }}</a>
               </li>
               <li class="list-group-item text-truncate">
-                <i class="fas fa-folder fa-fw mr-1"></i>
+                <i class="fas fa-folder fa-fw me-1"></i>
                 <a href="{{ .namespace.web_url }}" target="_blank" rel="noopener nofollow">{{ .namespace.name }}</a>
               </li>
               <li class="list-group-item">
                 <div class="row">
                   <div class="col">
-                    <i class="fas fa-info-circle fa-fw mr-1"></i>
+                    <i class="fas fa-info-circle fa-fw me-1"></i>
                     <a href="{{ .web_url }}/-/issues" target="_blank" rel="noopener nofollow">
                       {{ .open_issues_count }}
                     </a>
                   </div>
                   <div class="col">
-                    <i class="fas fa-star fa-fw mr-1"></i>
+                    <i class="fas fa-star fa-fw me-1"></i>
                     <a href="{{ .web_url }}/-/starrers" target="_blank" rel="noopener nofollow">
                       {{ .star_count }}
                     </a>
                   </div>
                   <div class="col">
-                    <i class="fas fa-code-branch fa-fw mr-1"></i>
+                    <i class="fas fa-code-branch fa-fw me-1"></i>
                     <a href="{{ .web_url }}/-/forks" target="_blank" rel="noopener nofollow">
                       {{ .forks_count }}
                     </a>
@@ -99,7 +99,7 @@
                 </div>
               </li>
               <li class="list-group-item">
-                <i class="fas fa-calendar-plus fa-fw mr-1"></i>
+                <i class="fas fa-calendar-plus fa-fw me-1"></i>
                 {{ dateFormat "2006/01/02 15:04:05 MST" .created_at }}
               </li>
             </ul>

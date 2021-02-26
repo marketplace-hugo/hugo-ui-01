@@ -25,13 +25,13 @@
 {{ end }}
 
 {{ if (eq $view "1") }}
-<article class="media node-{{ $x.Type }}">
-  <div class="mr-3">
+<article class="d-flex node-{{ $x.Type }}">
+  <div class="me-3">
     <div class="article-cover">
       {{ partial "module/node/cover/icon" (dict "context" $x) }}
     </div>
   </div>
-  <div class="media-body">
+  <div>
     <h4 class="h5 mt-0">
       <a href="{{ $x.RelPermalink }}">{{ $x.Title }}</a>
     </h4>
@@ -43,13 +43,13 @@
 {{ end }}
 
 {{ if (eq $view "2") }}
-<article class="media node-{{ $x.Type }}">
-  <div class="mr-3">
+<article class="d-flex node-{{ $x.Type }}">
+  <div class="me-3">
     <div class="article-cover">
       {{ partial "module/author/cover/avatar" (dict "context" $x) }}
     </div>
   </div>
-  <div class="media-body">
+  <div>
     <h4 class="h5 mt-0">
       <a href="{{ $x.RelPermalink }}">{{ $x.Title }}</a>
     </h4>
