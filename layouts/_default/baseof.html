@@ -13,7 +13,7 @@
 
 <body class="d-flex flex-column h-100 {{ $home }} {{ $node }} {{ $page }} {{ $type }}">
 <header>{{ partial "header" . }}</header>
-<main class="flex-shrink-0">{{ block "main" . }}{{ end }}</main>
+<main class="flex-shrink-0"><div class="mt-5">{{ block "main" . }}{{ end }}</div></main>
 <footer class="mt-auto">{{ partial "footer" . }}</footer>
 
 <!-- scripts -->
